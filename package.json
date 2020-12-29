@@ -1,0 +1,69 @@
+{
+	"name": "papermario",
+	"displayName": "Paper Mario Reverse-Engineering",
+	"license": "0BSD",
+	"description": "Extension to support working with the Paper Mario decompilation repository",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:papermariomsg"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "papermariomsg",
+				"aliases": [
+					"Paper Mario Messages",
+					"papermariomsg"
+				],
+				"extensions": [
+					".msg"
+				],
+				"configuration": "./syntaxes/msg.language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "papermariomsg",
+				"scopeName": "source.papermariomsg",
+				"path": "./syntaxes/msg.tmLanguage.json"
+			}
+		],
+		"configuration": {
+			"title": "Paper Mario",
+			"properties": {
+				"paperMarioMessages.autoClosingTags": {
+					"type": "boolean",
+					"default": true,
+					"markdownDescription": "Enable/disable autoclosing of message tags."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack --config ./build/node-extension.webpack.config.js",
+		"watch": "webpack --watch --config ./build/node-extension.webpack.config.js",
+		"package": "webpack --mode production --devtool hidden-source-map --config ./build/node-extension.webpack.config.js",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"glob": "^7.1.6",
+		"typescript": "^4.1.2",
+		"ts-loader": "^8.0.11",
+		"webpack": "^5.10.0",
+		"webpack-cli": "^4.2.0"
+	}
+}
