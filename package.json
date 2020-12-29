@@ -11,7 +11,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onLanguage:papermariomsg"
+        "onLanguage:papermariomsg",
+        "onLanguage:c"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -33,7 +34,12 @@
 				"language": "papermariomsg",
 				"scopeName": "source.papermariomsg",
 				"path": "./syntaxes/msg.tmLanguage.json"
-			}
+            },
+            {
+                "scopeName": "papermarioscript.injection",
+                "injectTo": ["source.c", "source.cpp"],
+				"path": "./syntaxes/script.tmLanguage.json"
+            }
 		],
 		"configuration": {
 			"title": "Paper Mario",

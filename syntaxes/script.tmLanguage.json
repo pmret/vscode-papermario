@@ -1,0 +1,75 @@
+{
+    "scopeName": "papermarioscript.injection",
+    "injectionSelector": "L:meta.block",
+    "patterns": [
+        { "include": "#match-keyword" },
+        { "include": "#loop-keyword" },
+        { "include": "#until-keyword" },
+        { "include": "#sleep-keyword" },
+        { "include": "#secs-keyword" },
+        { "include": "#bind-keyword" },
+        { "include": "#to-keyword" },
+        { "include": "#await-keyword" },
+        { "include": "#spawn-keyword" },
+        { "include": "#parallel-keyword" },
+        { "include": "#kill-suspend-resume-keywords" },
+        { "include": "#group-keyword" },
+
+        { "include": "#variable" }
+    ],
+    "repository": {
+        "match-keyword": {
+            "match": "\\bmatchc?\\b",
+            "name": "keyword.control"
+        },
+        "loop-keyword": {
+            "match": "\\bloop\\b",
+            "name": "keyword.control"
+        },
+        "until-keyword": {
+            "match": "\\buntil\\b",
+            "name": "keyword.control"
+        },
+        "sleep-keyword": {
+            "match": "\\bsleep\\b",
+            "name": "keyword.control"
+        },
+        "secs-keyword": {
+            "match": "\\bsecs\\b",
+            "name": "keyword.control"
+        },
+        "bind-keyword": {
+            "match": "\\bbind\\b",
+            "name": "keyword.control"
+        },
+        "to-keyword": {
+            "match": "\\bto\\b",
+            "name": "keyword.control"
+        },
+        "await-keyword": {
+            "match": "\\bawait\\b",
+            "name": "keyword.control"
+        },
+        "spawn-keyword": {
+            "match": "\\bspawn\\b",
+            "name": "keyword.control"
+        },
+        "parallel-keyword": {
+            "match": "\\bparallel\\b",
+            "name": "keyword.control"
+        },
+        "kill-suspend-resume-keywords": {
+            "match": "\\b(kill|suspend|resume)(\\s(group|others|script))?\\b",
+            "name": "keyword.control"
+        },
+        "group-keyword": {
+            "match": "\\bgroup\\b",
+            "name": "keyword.control"
+        },
+
+        "variable": {
+            "match": "\\b\\$[a-zA-Z0-9_]+\\b",
+            "name": "variable.papermarioscript"
+        }
+    }
+}
