@@ -2,7 +2,9 @@
 	"name": "papermario",
 	"displayName": "Paper Mario Reverse-Engineering",
 	"license": "0BSD",
-	"description": "Extension to support working with the Paper Mario decompilation repository",
+    "description": "Extension to support working with the Paper Mario decompilation repository",
+    "publisher": "nanaian",
+    "repository": "https://github.com/pmret/vscode-papermario",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.52.0"
