@@ -2,9 +2,9 @@
 	"name": "papermario",
 	"displayName": "Paper Mario Reverse-Engineering",
 	"license": "0BSD",
-    "description": "Extension to support working with the Paper Mario decompilation repository",
-    "publisher": "nanaian",
-    "repository": "https://github.com/pmret/vscode-papermario",
+	"description": "Extension to support working with the Paper Mario decompilation repository",
+	"publisher": "nanaian",
+	"repository": "https://github.com/pmret/vscode-papermario",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.52.0"
@@ -13,8 +13,8 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onLanguage:papermariomsg",
-        "onLanguage:c"
+		"onLanguage:papermariomsg",
+		"onLanguage:c"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -36,12 +36,15 @@
 				"language": "papermariomsg",
 				"scopeName": "source.papermariomsg",
 				"path": "./syntaxes/msg.tmLanguage.json"
-            },
-            {
-                "scopeName": "papermarioscript.injection",
-                "injectTo": ["source.c", "source.cpp"],
+			},
+			{
+				"scopeName": "papermarioscript.injection",
+				"injectTo": [
+					"source.c",
+					"source.cpp"
+				],
 				"path": "./syntaxes/script.tmLanguage.json"
-            }
+			}
 		],
 		"configuration": {
 			"title": "Paper Mario",

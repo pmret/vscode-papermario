@@ -51,7 +51,10 @@ const noCloseTags: string[] = [
 
 export function activate(context: vscode.ExtensionContext) {
     vscode.workspace.onDidChangeTextDocument(event => {
-        insertAutoCloseTag(event);
+        console.log(event.document.languageId);
+        if (event.document.languageId === "papermariomsg") {
+            insertAutoCloseTag(event);
+        }
     });
 
     context.subscriptions.push(vscode.languages.registerCompletionItemProvider("papermariomsg", {
