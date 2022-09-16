@@ -1,3 +1,3 @@
-# Paper Mario Reverse-Engineering
+# Deprecation Notice
 
-Visual Studio Code extension for anyone working with the Paper Mario decompilation project. Analogous to [vscode-star-rod](https://github.com/nanaian/vscode-star-rod).
+vscode-papermario is now deprecated in favour of [vscode-star-rod](https://github.com/nanaian/vscode-star-rod). Please use that instead.
